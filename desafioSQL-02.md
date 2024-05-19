@@ -95,28 +95,25 @@ LIMIT 1;
 ```
 SELECT 
     to_char(fecha, 'dd/mm/yyyy')    AS fecha_inscritos, 
-    cantidad                        AS cantidad_usuarios 
+    cantidad                        AS cantidad_usuarios,
+    fuente                          AS fuente_usuarios
 FROM inscritos 
 WHERE fuente = 'Blog' 
 ORDER BY cantidad DESC
 LIMIT 1;
 ```
 
-![Alt text](D:\DESAFIO-LATAM\SQL-I\DESAFIO-02\desafioSQL-02\imagenes\8.png)
+![Alt text](D:\DESAFIO-LATAM\SQL-I\DESAFIO-02\desafioSQL-02\imagenes\7.png)
 
 #### 8. ¿Cuál es el promedio de personas inscritas por día? Toma en consideración que la base de datos tiene un registro de 8 días, es decir, se obtendrán 8 promedios.
 
 ```
 SELECT 
     to_char(fecha, 'dd/mm/yyyy')            AS fecha_inscritos, 
-    ROUND(SUM(cantidad) / COUNT(fuente), 3) AS inscritos_por_dia
+    ROUND(SUM(cantidad) / COUNT(fuente), 5) AS inscritos_por_dia
 FROM inscritos
 GROUP BY fecha
 ORDER BY fecha;
-
--- fecha inscritos_por_dia
--- 01-01-2021 50.00000
--- 01-02-2021 60.00000
 ```
 
 ![Alt text](D:\DESAFIO-LATAM\SQL-I\DESAFIO-02\desafioSQL-02\imagenes\8.png)
@@ -129,8 +126,8 @@ SELECT
     SUM(cantidad) AS total_inscritos 
 FROM inscritos 
 GROUP BY fecha  
-HAVING SUM(cantidad) > 50;
- --ORDER BY fecha_inscritos ASC; --ORDEN OPCIONAL
+HAVING SUM(cantidad) > 50
+ORDER BY total_inscritos DESC; --ORDEN OPCIONAL
 ```
 
 ![Alt text](D:\DESAFIO-LATAM\SQL-I\DESAFIO-02\desafioSQL-02\imagenes\9.png)
@@ -150,7 +147,3 @@ ORDER BY fecha ASC;
 ```
 
 ![Alt text](D:\DESAFIO-LATAM\SQL-I\DESAFIO-02\desafioSQL-02\imagenes\10.png)
-
-**-- fecha promedio_diario**
-**-- 01-03-2021 51.5**
-**-- 01-04-2021 46.5**

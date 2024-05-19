@@ -62,7 +62,8 @@ LIMIT 1;
 
 SELECT 
     to_char(fecha, 'dd/mm/yyyy')    AS fecha_inscritos, 
-    cantidad                        AS cantidad_usuarios 
+    cantidad                        AS cantidad_usuarios,
+    fuente                          AS fuente_usuarios 
 FROM inscritos 
 WHERE fuente = 'Blog' 
 ORDER BY cantidad DESC
@@ -73,7 +74,7 @@ LIMIT 1;
 
 SELECT 
     to_char(fecha, 'dd/mm/yyyy')            AS fecha_inscritos, 
-    ROUND(SUM(cantidad) / COUNT(fuente), 3) AS inscritos_por_dia
+    ROUND(SUM(cantidad) / COUNT(fuente), 5) AS inscritos_por_dia
 FROM inscritos
 GROUP BY fecha
 ORDER BY fecha;
@@ -88,9 +89,8 @@ SELECT
     SUM(cantidad) AS total_inscritos 
 FROM inscritos 
 GROUP BY fecha  
-HAVING SUM(cantidad) > 50;
- --ORDER BY fecha_inscritos ASC; --ORDEN OPCIONAL
-
+HAVING SUM(cantidad) > 50
+ORDER BY total_inscritos DESC; --ORDEN OPCIONAL
 
 -- 10. ¿Cuál es el promedio por día de personas inscritas?
 -- Considerando sólo calcular desde el tercer día.
