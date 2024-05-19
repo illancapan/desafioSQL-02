@@ -139,9 +139,5 @@ WHERE fecha >= '01/03/2021'
 GROUP BY fecha
 ORDER BY fecha ASC;
 ```
-
-<<<<<<< HEAD
-![Alt text](D:\DESAFIO-LATAM\SQL-I\DESAFIO-02\desafioSQL-02\imagenes\10.png)
-=======
 ![Alt text](https://github.com/illancapan/desafioSQL-02/blob/main/imagenes/10.png)
 
