@@ -3,7 +3,8 @@
 
 #### Consulta Inicial 
 
-```sql SELECT * FROM inscritos;
+```
+SELECT * FROM inscritos;
 ```
 
 #### 1. ¿Cuántos registros hay?
@@ -14,9 +15,7 @@ SELECT
 FROM inscritos;
 ```
 
-
-
-![Alt text](D:\DESAFIO-LATAM\SQL-I\DESAFIO-02\desafioSQL-02\imagenes\1.png)
+![Alt text](https://github.com/illancapan/desafioSQL-02/blob/main/imagenes/1.png)
 
 #### 2. ¿Cuántos inscritos hay en total?
 
@@ -26,13 +25,7 @@ SELECT
 FROM inscritos;
 ```
 
-
-
-![Alt text](D:\DESAFIO-LATAM\SQL-I\DESAFIO-02\desafioSQL-02\imagenes\2.png)
-
-
-
-
+![Alt text](https://github.com/illancapan/desafioSQL-02/blob/main/imagenes/2.png)
 
 #### 3. ¿Cuál o cuáles son los registros de mayor antigüedad?
 
@@ -46,9 +39,7 @@ WHERE fecha = (SELECT MIN(fecha) FROM inscritos)
 ORDER BY fecha ASC;
 ```
 
-![Alt text](D:\DESAFIO-LATAM\SQL-I\DESAFIO-02\desafioSQL-02\imagenes\3.png)
-
-
+![Alt text](https://github.com/illancapan/desafioSQL-02/blob/main/imagenes/3.png)
 
 #### 4. ¿Cuántos inscritos hay por día? (Indistintamente de la fuente de inscripción)
 
@@ -61,7 +52,7 @@ GROUP BY fecha
 ORDER BY fecha;
 ```
 
-![Alt text](D:\DESAFIO-LATAM\SQL-I\DESAFIO-02\desafioSQL-02\imagenes\4.png)
+![Alt text](https://github.com/illancapan/desafioSQL-02/blob/main/imagenes/4.png)
 
 #### 5. ¿Cuántos inscritos hay por fuente?
 
@@ -74,7 +65,8 @@ GROUP BY fuente
 ORDER BY fuente;
 ```
 
-![Alt text](D:\DESAFIO-LATAM\SQL-I\DESAFIO-02\desafioSQL-02\imagenes\5.png)
+![Alt text](https://github.com/illancapan/desafioSQL-02/blob/main/imagenes/5.png)
+
 
 #### 6. ¿Qué día se inscribió la mayor cantidad de personas? Y ¿Cuántas personas se inscribieron en ese día?
 
@@ -88,7 +80,7 @@ ORDER BY total_inscritos DESC
 LIMIT 1;
 ```
 
-![Alt text](D:\DESAFIO-LATAM\SQL-I\DESAFIO-02\desafioSQL-02\imagenes\6.png)
+![Alt text](https://github.com/illancapan/desafioSQL-02/blob/main/imagenes/6.png)
 
 #### 7. ¿Qué días se inscribieron la mayor cantidad de personas utilizando el blog? ¿Cuántas personas fueron?
 
@@ -102,7 +94,7 @@ ORDER BY cantidad DESC
 LIMIT 1;
 ```
 
-![Alt text](D:\DESAFIO-LATAM\SQL-I\DESAFIO-02\desafioSQL-02\imagenes\8.png)
+![Alt text](https://github.com/illancapan/desafioSQL-02/blob/main/imagenes/7.png)
 
 #### 8. ¿Cuál es el promedio de personas inscritas por día? Toma en consideración que la base de datos tiene un registro de 8 días, es decir, se obtendrán 8 promedios.
 
@@ -119,7 +111,7 @@ ORDER BY fecha;
 -- 01-02-2021 60.00000
 ```
 
-![Alt text](D:\DESAFIO-LATAM\SQL-I\DESAFIO-02\desafioSQL-02\imagenes\8.png)
+![Alt text](https://github.com/illancapan/desafioSQL-02/blob/main/imagenes/8.png)
 
 #### 9. ¿Qué días se inscribieron más de 50 personas?
 
@@ -133,9 +125,7 @@ HAVING SUM(cantidad) > 50;
  --ORDER BY fecha_inscritos ASC; --ORDEN OPCIONAL
 ```
 
-![Alt text](D:\DESAFIO-LATAM\SQL-I\DESAFIO-02\desafioSQL-02\imagenes\9.png)
-
-
+![Alt text](https://github.com/illancapan/desafioSQL-02/blob/main/imagenes/9.png)
 
 #### 10. ¿Cuál es el promedio por día de personas inscritas? Considerando sólo calcular desde el tercer día.
 
@@ -149,7 +139,7 @@ GROUP BY fecha
 ORDER BY fecha ASC;
 ```
 
-![Alt text](D:\DESAFIO-LATAM\SQL-I\DESAFIO-02\desafioSQL-02\imagenes\10.png)
+![Alt text](https://github.com/illancapan/desafioSQL-02/blob/main/imagenes/10.png)
 
 **-- fecha promedio_diario**
 **-- 01-03-2021 51.5**
