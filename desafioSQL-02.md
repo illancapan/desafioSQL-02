@@ -145,7 +145,3 @@ ORDER BY fecha ASC;
 =======
 ![Alt text](https://github.com/illancapan/desafioSQL-02/blob/main/imagenes/10.png)
 
-**-- fecha promedio_diario**
-**-- 01-03-2021 51.5**
-**-- 01-04-2021 46.5**
->>>>>>> 86ea30c663f83bd93443a4f03d47f78751abfc55
