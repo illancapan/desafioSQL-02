@@ -95,11 +95,7 @@ ORDER BY cantidad DESC
 LIMIT 1;
 ```
 
-<<<<<<< HEAD
-![Alt text](D:\DESAFIO-LATAM\SQL-I\DESAFIO-02\desafioSQL-02\imagenes\7.png)
-=======
 ![Alt text](https://github.com/illancapan/desafioSQL-02/blob/main/imagenes/7.png)
->>>>>>> 86ea30c663f83bd93443a4f03d47f78751abfc55
 
 #### 8. ¿Cuál es el promedio de personas inscritas por día? Toma en consideración que la base de datos tiene un registro de 8 días, es decir, se obtendrán 8 promedios.
 
@@ -140,12 +136,8 @@ GROUP BY fecha
 ORDER BY fecha ASC;
 ```
 
-<<<<<<< HEAD
-![Alt text](D:\DESAFIO-LATAM\SQL-I\DESAFIO-02\desafioSQL-02\imagenes\10.png)
-=======
 ![Alt text](https://github.com/illancapan/desafioSQL-02/blob/main/imagenes/10.png)
 
 **-- fecha promedio_diario**
 **-- 01-03-2021 51.5**
 **-- 01-04-2021 46.5**
->>>>>>> 86ea30c663f83bd93443a4f03d47f78751abfc55
